@@ -4,9 +4,6 @@ MAINTAINER manjula@thinkcube.com
 RUN yum install -y https://rpm.nodesource.com/pub_6.x/el/7/x86_64/nodesource-release-el7-1.noarch.rpm
 RUN yum  install -y nodejs vim gcc-c++ make git bzip2 && yum clean all 
 
-
-RUN npm install -g npm
-
 RUN gpg --keyserver ha.pool.sks-keyservers.net --recv-keys BF357DD4 \
  && curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/download/1.9/gosu-amd64" \
  && curl -o /usr/local/bin/gosu.asc -SL "https://github.com/tianon/gosu/releases/download/1.9/gosu-amd64.asc" \
